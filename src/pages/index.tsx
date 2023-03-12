@@ -1,17 +1,13 @@
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ["latin"] });
-import { LogoNerdbord } from "../components/LogoNerdbord";
+const inter = Inter({ subsets: ['latin'] })
 
-import styles from "../styles/index.module.css";
+import styles from '@/styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <div className={styles.wrapper}>
-      <LogoNerdbord />
-      <h1 className={inter.className}>
-        Recruitment task for Javascript Trainee
-      </h1>
+    <div>
+      <p className={inter.className}>Here we go</p>
     </div>
-  );
+  )
 }
