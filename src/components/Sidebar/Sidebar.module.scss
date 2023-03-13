@@ -1,0 +1,35 @@
+@import '@/styles/variables.module.scss';
+
+.sideBar {
+  flex: 318px;
+  height: 500px;
+  background-color: $white;
+
+  .header {
+    font-size: 18px;
+    padding: 24px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .menuList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    &Item {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 14px 0px 13px 48px;
+      color: $secondary-gray;
+      cursor: pointer;
+      &Active {
+        background-color: $tertiary-gray;
+        color: $orange;
+      }
+    }
+  }
+}

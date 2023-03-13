@@ -1,20 +1,17 @@
-import React from 'react'
+import { TAnimal } from '@/types/animals.type'
+import SectionItem from './SectionItem/SectionItem'
+import styles from './Sections.module.scss'
 
-const Sections = () => {
+interface ISectionsProps {
+  animals: TAnimal[]
+}
+
+const Sections = ({ animals }: ISectionsProps) => {
   return (
-    <section>
-      <div>
-        <h5>POLAR BEAR</h5>
-        <p>Say Hello to your new friend</p>
-      </div>
-      <div>
-        <h5>POLAR BEAR</h5>
-        <p>Say Hello to your new friend</p>
-      </div>
-      <div>
-        <h5>POLAR BEAR</h5>
-        <p>Say Hello to your new friend</p>
-      </div>
+    <section className={styles.sectionsWrapper}>
+      {animals.map((animal) => (
+        <SectionItem key={animal.id} animal={animal} />
+      ))}
     </section>
   )
 }

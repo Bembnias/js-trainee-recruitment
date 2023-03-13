@@ -19,7 +19,7 @@ export const animals = [
     id: '3',
     name: 'Panda',
     description: 'Eating always with pleasure',
-    highlightedWord: 'epleasure',
+    highlightedWord: 'pleasure',
     imgUrl: '/panda.png',
   },
   {
@@ -40,14 +40,14 @@ export const animals = [
     id: '6',
     name: 'Butterfly',
     description: 'Majestic every time of a day',
-    highlightedWord: 'majestic',
+    highlightedWord: 'Majestic',
     imgUrl: '/butterfly.png',
   },
   {
     id: '7',
     name: 'Elephant',
     description: 'It makes a huge difference',
-    highlightedWord: 'majestic',
+    highlightedWord: 'huge',
     imgUrl: '/butterfly.png',
   },
 ]
