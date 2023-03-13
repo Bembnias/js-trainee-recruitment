@@ -48,6 +48,6 @@ export const animals = [
     name: 'Elephant',
     description: 'It makes a huge difference',
     highlightedWord: 'huge',
-    imgUrl: '/butterfly.png',
+    imgUrl: '/elephant.png',
   },
 ]

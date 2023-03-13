@@ -12,7 +12,7 @@ const SectionItem = ({ animal }: ISectionItemProps) => {
   const poSlowie = animal.description.substring(slowoIndex + animal.highlightedWord.length)
 
   return (
-    <article>
+    <article id={animal.id} className={styles.sectionItem}>
       <h5 className={styles.name}>{animal.name}</h5>
       <p className={styles.description}>
         {przedSlowem}
@@ -24,7 +24,7 @@ const SectionItem = ({ animal }: ISectionItemProps) => {
       <Image
         className={styles.image}
         src={animal.imgUrl}
-        alt={animal.description}
+        alt={`${animal.name} - ${animal.description}`}
         width={817}
         height={431}
       />

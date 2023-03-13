@@ -10,15 +10,13 @@ import Sidebar from '@/components/Sidebar/Sidebar'
 import Sections from '@/components/Sections/Sections'
 
 export default function Home({ animals }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const animalNames = animals.map((animal) => animal.name)
-
   return (
     <div className={`${styles.homepageWrapper} ${inter.className}`}>
       <Head>
         <title>Trainee recruitment</title>
       </Head>
 
-      <Sidebar animalNames={animalNames} />
+      <Sidebar animals={animals} />
       <Sections animals={animals} />
     </div>
   )
