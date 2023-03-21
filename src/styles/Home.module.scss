@@ -1,0 +1,10 @@
+@import './variables.module.scss';
+
+.homepageWrapper {
+  width: 1240px;
+  margin: 75px auto;
+  display: flex;
+  flex-direction: row;
+  gap: 105px;
+  min-height: 100%;
+}
