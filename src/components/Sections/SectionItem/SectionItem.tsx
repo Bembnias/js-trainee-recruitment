@@ -7,19 +7,21 @@ interface ISectionItemProps {
 }
 
 const SectionItem = ({ animal }: ISectionItemProps) => {
-  const slowoIndex = animal.description.indexOf(animal.highlightedWord)
-  const przedSlowem = animal.description.substring(0, slowoIndex)
-  const poSlowie = animal.description.substring(slowoIndex + animal.highlightedWord.length)
+  const highlightedWordIndex = animal.description.indexOf(animal.highlightedWord)
+  const beforeHighlightedWord = animal.description.substring(0, highlightedWordIndex)
+  const afterHighlightedWord = animal.description.substring(
+    highlightedWordIndex + animal.highlightedWord.length
+  )
 
   return (
     <article id={animal.id} className={styles.sectionItem}>
       <h5 className={styles.name}>{animal.name}</h5>
       <p className={styles.description}>
-        {przedSlowem}
+        {beforeHighlightedWord}
         <span className={`${styles.description} ${styles.descriptionHighlighted}`}>
           {animal.highlightedWord}
         </span>
-        {poSlowie}
+        {afterHighlightedWord}
       </p>
       <Image
         className={styles.image}

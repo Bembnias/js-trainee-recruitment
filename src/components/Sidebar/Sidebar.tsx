@@ -1,7 +1,5 @@
 import styles from './Sidebar.module.scss'
 import { TAnimal } from '@/types/animals.type'
-// UUID Just to make sure that IDs are unique
-import { v4 as uuidv4 } from 'uuid'
 import { Link } from 'react-scroll'
 
 interface ISectionsProps {
@@ -15,7 +13,7 @@ const Sidebar = ({ animals }: ISectionsProps) => {
       <ul className={styles.menuList}>
         {animals.map((animal) => (
           <Link
-            key={`${animal.id}${uuidv4()}`}
+            key={animal.id}
             className={styles.menuListItem}
             activeClass={styles.menuListItemActive}
             smooth
